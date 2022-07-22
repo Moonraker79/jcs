@@ -2,15 +2,15 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse'
-
+import { siteTitle, siteDescription } from './css/header.module.css'
 const Header = () => {
   return (
     <header>
         <Navbar expand='md' bg='dark' variant="dark">
           <Container>
           <Navbar.Brand>
-            <h3>Jeff C. Salter</h3>
-            <p>Cybersecurity & Information Design</p>
+            <h3 className={siteTitle}>Jeff C. Salter</h3>
+            <p className={siteDescription}>Cybersecurity & Information Design</p>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <NavbarCollapse id='basic-navbar-nav'>
