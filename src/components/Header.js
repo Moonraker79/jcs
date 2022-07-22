@@ -1,19 +1,20 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Nav, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse'
 
 const Header = () => {
   return (
     <header>
-        <Navbar>
+        <Navbar expand='md' bg='dark' variant="dark">
+          <Container>
           <Navbar.Brand>
             <h3>Jeff C. Salter</h3>
             <p>Cybersecurity & Information Design</p>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <NavbarCollapse id='basic-navbar-nav'>
-            <Nav>
+            <Nav className='ms-auto'>
               <Nav.Item>
                 <Link to='about' className='nav-link' activeClassName='active'>About</Link>
               </Nav.Item>
@@ -25,6 +26,7 @@ const Header = () => {
               </Nav.Item>
             </Nav>
           </NavbarCollapse>
+          </Container>
         </Navbar>
     </header>
   )
